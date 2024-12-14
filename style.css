@@ -1,0 +1,259 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+    color: #333;
+    animation: fadeInBody 1.5s ease-in-out;
+}
+
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+/* Navbar */
+nav {
+    background: linear-gradient(90deg, #6a1b9a, #283593);
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideInNav 1s ease-out;
+}
+
+@keyframes slideInNav {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+    text-decoration: underline;
+}
+
+/* Page Header */
+h1 {
+    text-align: center;
+    color:  whitesmoke;
+    margin-top: 0.3em; /* Moved further up */
+    font-size: 3em; /* Increased size */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.5em 0;
+    background: linear-gradient(135deg,  #6a1b9a, #283593); /* Gradient background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Add shadow */
+    border-bottom: 4px solid #6a1b9a; /* Bottom border */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+    color:  #e1bee7; /* Change text color on hover */
+}
+
+
+
+
+/* Post Container */
+.post {
+    background: linear-gradient(135deg, #ffffff, #f3e5f5);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 1em auto;
+    padding: 1.5em;
+    width: 80%;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInPost 1.2s ease-out;
+}
+
+@keyframes fadeInPost {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.user {
+    font-style: italic;
+    font-weight: bold;
+    color: #5c6bc0;
+    margin-bottom: 0.5em;
+}
+
+.content {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+    color: #444;
+}
+
+/* Buttons */
+button, a.button {
+    background: linear-gradient(90deg, #6a1b9a, #283593);
+    color: white;
+    padding: 0.5em 1.5em;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 0.5em;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, a.button:hover {
+    background: linear-gradient(90deg, #8e24aa, #3949ab);
+    transform: scale(1.05);
+}
+
+/* Links Styling */
+.post a {
+    display: inline-block;
+    margin: 0.5em 0;
+    font-size: 1em;
+    color: #3949ab;
+    text-decoration: none;
+    padding: 0.4em 1em;
+    background: #e8eaf6;
+    border: 1px solid #3949ab;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.post a:hover {
+    color: white;
+    background-color: #5c6bc0;
+}
+
+a.create-post {
+    display: inline-block;
+    margin: 1em auto;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    background: linear-gradient(90deg, #43a047, #1e88e5);
+    padding: 0.6em 1.8em;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.create-post:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+form {
+    background: linear-gradient(135deg, #ffffff, #e8eaf6);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    width: 80%;
+    max-width: 600px;
+    margin: 1.5em auto;
+    animation: fadeInForm 1s ease-out;
+}
+
+@keyframes fadeInForm {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+form textarea, form input {
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease;
+}
+
+form textarea:focus, form input:focus {
+    border-color: #6a1b9a;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background: linear-gradient(90deg, #283593, #6a1b9a);
+    color: white;
+    margin-top: 2em;
+    font-size: 0.9em;
+    animation: slideInFooter 1s ease-out;
+}
+
+@keyframes slideInFooter {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+footer a {
+    color: #ffeb3b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #ffd600;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
